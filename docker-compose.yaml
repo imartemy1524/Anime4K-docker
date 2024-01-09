@@ -1,0 +1,20 @@
+name: anime4k
+services:
+  test:
+    image: imartemy1524/anime4k:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    runtime: nvidia
+    volumes:
+      - ./test.mkv:/home/test.mkv
+      - ./out:/home/out
+    entrypoint: anime4k
+    command: "-i ./test.mkv ./out/out.mkv"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu,video,compute,graphics,utility]
