@@ -185,6 +185,7 @@ RUN cd ~/nv && \
     --extra-cflags=-I/usr/local/cuda/include \
     --extra-ldflags=-L/usr/local/cuda/lib64 \
     --disable-static \
+    --enable-libsvtav1 \
     --enable-gnutls \
     --enable-shared && \
   make -j $CPUS && \
