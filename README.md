@@ -13,7 +13,7 @@ docker compose build
 ``` 
 or download it from the dockerhub:
 ```shell
-docker pull imartemy1524/anime4k:latest
+docker pull imartemy1524/anime4k:4.0
 ```
 
 2) Prepare video file, place it into the root directory of the project, for example, **abc.mp4** and edit the `volumes` in [docker-compose.yaml](docker-compose.yaml) file: replace `./test.mkv:/home/test.mkv` with `./abc.mp4:/home/abc.mp4`
