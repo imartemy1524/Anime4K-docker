@@ -1,16 +1,16 @@
 name: anime4k
 services:
   test:
-    image: imartemy1524/anime4k:latest
+    image: docker.io/imartemy1524/anime4k:3.0
     build:
       context: .
       dockerfile: ./Dockerfile
     runtime: nvidia
     volumes:
-      - ./test.mkv:/home/test.mkv
+      - ./test.mp4:/home/test.mp4
       - ./out:/home/out
     entrypoint: anime4k
-    command: "-i ./test.mkv ./out/out.mkv"
+    command: "-i /home/test.mp4 ./out/output.mp4"
     deploy:
       resources:
         reservations:
