@@ -1,7 +1,7 @@
 name: anime4k
 services:
   test:
-    image: docker.io/imartemy1524/anime4k:3.0
+    image: docker.io/imartemy1524/anime4k:4.0
     build:
       context: .
       dockerfile: ./Dockerfile

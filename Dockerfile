@@ -1,4 +1,4 @@
-FROM mpv:1.
+FROM docker.io/imartemy1524/mpv:4.0
 
 WORKDIR /tmp
 # install python 3.10 to run python scripts
