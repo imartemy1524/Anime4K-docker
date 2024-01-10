@@ -31,7 +31,7 @@ docker pull imartemy1524/anime4k:4.0
 - `-h` (`--height`) - output height of resized video (default **2160**)
 - `-c` (`--codec`) - encoder of result video file, which you can list using `ffmpeg -encoders` (default: `mpeg4`).
 <br> **Warning**: some of the codecs may not work, or work really slow because inside docker gpu is virtual, which may impose restrictions.
-- `-s` (`--shaders`) - string, contains shaders to apply (default **A+A**: `"~~/shaders/Anime4K_Clamp_Highlights.glsl:~~/shaders/Anime4K_Restore_CNN_VL.glsl:~~/shaders/Anime4K_Upscale_CNN_x2_VL.glsl:~~/shaders/Anime4K_Restore_CNN_M.glsl:~~/shaders/Anime4K_AutoDownscalePre_x2.glsl:~~/shaders/Anime4K_AutoDownscalePre_x4.glsl:~~/shaders/Anime4K_Upscale_CNN_x2_M.glsl"`). You can find them in [config/input.conf](config/input.conf) file. 
+- `-s` (`--shaders`) - string, contains shaders to apply, possible values: `a`, `b`, `c`, `a+a`, `b+b` (default `A+A`). 
 - `--no-audio` - add if you don't want to have audio in output file
 
 For example, command to convert video `abc.mp4` to 8k (**7680x4320**) without audio would be:
